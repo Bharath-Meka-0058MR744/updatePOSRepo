@@ -13,6 +13,26 @@
         <value name="value">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</value>
         <value name="isSecure">false</value>
       </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">code1</value>
+        <value name="value">SAVE20</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">code2</value>
+        <value name="value">GET20</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">code3</value>
+        <value name="value">FLAT20</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">code4</value>
+        <value name="value">INSTANT20</value>
+        <value name="isSecure">false</value>
+      </record>
     </array>
   </record>
 </IDataXMLCoder>
