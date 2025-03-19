@@ -886,7 +886,7 @@
     <value name="interactionName">create</value>
     <value name="serviceName">Admin</value>
     <value name="virtualServiceName">WmCloudStreams.RestVS</value>
-    <value name="connectionName">services:shopifyConn1</value>
+    <value name="connectionName">com.ibm:shopifyConn1</value>
     <value name="connectionType">sagcloud</value>
     <value name="connectorID">com.softwareag.cloudstreams.shopify_v2019-04</value>
     <record name="customData" javaclass="com.wm.util.Values">
