@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="services:getProductsFromShopify" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="com:getProductsFromShopify" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -896,7 +897,7 @@
 </MAPDELETE>
 </MAP>
 
-<INVOKE TIMEOUT="" SERVICE="services:createPriceRule" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="com.ibm:createPriceRule" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -1180,17 +1181,6 @@
         <value name="is_global">false</value>
         <array name="rec_fields" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">id</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
@@ -1201,6 +1191,17 @@
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
             <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">id</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
             </array>
             <value name="modifiable">true</value>
           </record>
@@ -1260,9 +1261,6 @@
   <!-- nodes -->
 
 <MAPCOPY FROM="/headers;2;0" TO="/createPriceRuleInput;2;0/requestHeaders;2;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/productDocument;2;0/id;1;0" TO="/createPriceRuleInput;2;0/requestBody;2;0/price_rule;2;0/entitled_product_ids;3.7;1">
 </MAPCOPY>
 
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/createPriceRuleInput;2;0/requestBody;2;0/price_rule;2;0/target_type;1;0">
@@ -1428,13 +1426,16 @@
 
 <MAPCOPY FROM="/applyCode;1;0" TO="/createPriceRuleInput;2;0/requestBody;2;0/price_rule;2;0/title;1;0">
 </MAPCOPY>
+
+<MAPCOPY FROM="/productDocument;2;0/products;2;0/id;1;0" TO="/createPriceRuleInput;2;0/requestBody;2;0/price_rule;2;0/entitled_product_ids;3.7;1">
+</MAPCOPY>
 </MAP>
 
 <MAP MODE="OUTPUT">
 </MAP>
 </INVOKE>
 
-<INVOKE TIMEOUT="" SERVICE="services:applyDiscountCode" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="com.ibm:applyDiscountCode" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->

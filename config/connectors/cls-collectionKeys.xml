@@ -2,8 +2,8 @@
 <services>
     <cloudstreamsCollectionKeys serviceName="WmCloudStreams.RestVS">
         <servicesKeys>
-            <keyDetails collectionKey="services:applyDiscountCode" connectorServiceName="services:applyDiscountCode"/>
-            <keyDetails collectionKey="services:createPriceRule" connectorServiceName="services:createPriceRule"/>
+            <keyDetails collectionKey="com.ibm:applyDiscountCode" connectorServiceName="com.ibm:applyDiscountCode"/>
+            <keyDetails collectionKey="com.ibm:createPriceRule" connectorServiceName="com.ibm:createPriceRule"/>
         </servicesKeys>
     </cloudstreamsCollectionKeys>
 </services>

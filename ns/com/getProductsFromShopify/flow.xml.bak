@@ -5,11 +5,6 @@
 
   <!-- nodes -->
 
-<SEQUENCE TIMEOUT="" EXIT-ON="SUCCESS">
-  <COMMENT></COMMENT>
-
-  <!-- nodes -->
-
 <INVOKE TIMEOUT="" SERVICE="pub.globalVariable:getGlobalVariable" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
@@ -1697,5 +1692,4 @@
 </MAPDELETE>
 </MAP>
 </INVOKE>
-</SEQUENCE>
 </FLOW>
